@@ -152,17 +152,17 @@ class SinglyLinkedList {
   reverse() {
     if (this.length === 0) return false
 
-    let node = this.head
+    let currNode = this.head
     this.head = this.tail
-    this.tail = node
-    let prev = null;
-    let next = null;
+    this.tail = currNode
+    let prevNode = null;
+    let nextNode;
 
     for (let i = 0; i < this.length; i++) {
-      next = node.next
-      node.next = prev
-      prev = node
-      node = next
+      nextNode = currNode.next
+      currNode.next = prevNode
+      prevNode = currNode
+      currNode = nextNode
     }
 
     return this;
@@ -241,10 +241,10 @@ class SinglyLinkedList {
 
 let list = new SinglyLinkedList()
 list.push('hello')
-list.push('Emmanuel')
-list.push('Emmanuelllla')
-list.push('Tony')
-list.push('Felicia')
+// list.push('Emmanuel')
+// list.push('Emmanuelllla')
+// list.push('Tony')
+// list.push('Felicia')
 // list.pop()
 // list.shift('Daniella')
 // list.shift()
