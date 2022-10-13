@@ -1,4 +1,4 @@
 #### JS-DST
 ------------------
 
-### Javascript Algorithm and Data-structures
+### Javascript Algorithm and Data-structure
